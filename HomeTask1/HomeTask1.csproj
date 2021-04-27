@@ -74,6 +74,9 @@
     <Compile Include="Entity\Order.cs" />
     <Compile Include="Entity\Products.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Models\ClientViewModel.cs" />
+    <Compile Include="Models\ManagerViewModel.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

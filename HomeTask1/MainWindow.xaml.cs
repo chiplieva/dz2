@@ -1,4 +1,5 @@
-﻿using HomeTask1.View;
+﻿using HomeTask1.Entity;
+using HomeTask1.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,13 +31,17 @@ namespace HomeTask1
         {
             try 
             {
-                if (LoginBox.Text == Login && PasswordBox.Password == "tuptup")
+                using (var context = new Magnit())
                 {
+                    var user = context.User.FirstOrDefault(u => LoginBox.Text == u.Login && PasswordBox.Password == u.Password);
+                    
+                    if (user == null)
+                        throw new Exception("Пользователя не существует ");
+                  
                     maneger window = new maneger();
                     window.Show();
+                  
                 }
-                else throw new Exception("Пользователя не существует ");
-
             }
             catch(Exception ex)
             {
@@ -50,6 +55,20 @@ namespace HomeTask1
         {
             
             Close();
+        }
+
+        private void CheckBoxPassword_Checked(object sender, RoutedEventArgs e)
+        {
+            if (CheckBoxPassword.IsChecked == true)
+            {
+                PasswordBox.Visibility = Visibility.Hidden;
+                .Visibility = 
+            }
+        }
+
+        private void CheckBoxPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

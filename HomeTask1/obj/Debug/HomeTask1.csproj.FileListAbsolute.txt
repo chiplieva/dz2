@@ -27,3 +27,4 @@ C:\Users\ПК\source\repos\HomeTask1\HomeTask1\bin\Debug\ru\EntityFramework.reso
 C:\Users\ПК\source\repos\HomeTask1\HomeTask1\obj\Debug\HomeTask1.csproj.CopyComplete
 C:\Users\ПК\source\repos\HomeTask1\HomeTask1\obj\Debug\View\NewOrder.g.cs
 C:\Users\ПК\source\repos\HomeTask1\HomeTask1\obj\Debug\View\NewOrder.baml
+C:\Users\ПК\source\repos\HomeTask1\HomeTask1\obj\Debug\GeneratedInternalTypeHelper.g.cs

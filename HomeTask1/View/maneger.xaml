@@ -4,8 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeTask1.View"
+        xmlns:vm="clr-namespace:HomeTask1.Models"
         mc:Ignorable="d"
         Title="maneger" Height="550" Width="650">
+    <Window.DataContext>
+        <vm:ManagerViewModel
+            x:Name="managerVM"/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -56,12 +61,20 @@
 
         </Grid>
         <Grid Grid.Row="1">
-            <DataGrid AutoGenerateColumns="False">
+            <DataGrid 
+                SelectedItem="{Binding SelectedModel}"
+                ItemsSource="{Binding Orders}"
+                AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Order Number "/>
-                    <DataGridTextColumn  Header=" Name "/>
-                    <DataGridTextColumn  Header="Quantity of goods"/>
-                    <DataGridTextColumn  Header=" Price "/>
+                    <DataGridTextColumn 
+                        Binding="{Binding Id}"
+                        Header="Order Number "/>
+                    <DataGridTextColumn 
+                        Binding="{Binding OrderName}"
+                        Header=" Name "/>
+                    <DataGridTextColumn  
+                        Binding="{Binding Price}"
+                        Header=" Price "/>
                 </DataGrid.Columns>
 
             </DataGrid>
